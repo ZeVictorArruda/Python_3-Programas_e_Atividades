@@ -4,6 +4,7 @@
 - Quantos produtos custam mais de mil reais
 - Nome e valor do produto mais barato
 - Nome e valor do produto mais caro"""
+
 barato = caro = ''
 total = menor = maior = cont = maior_mil = 0
 while True:
