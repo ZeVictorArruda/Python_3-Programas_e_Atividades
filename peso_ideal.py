@@ -29,9 +29,21 @@ while True:
         break
 
 print('-' * 30)
-print(f'{"|No":<3} {"|NOME":<15} {"|ALTURA":<15} {"|PESO":<15} {"|IMC":<15} {"|SITUAÇÃO":<20}')
-for i, c in enumerate(lista):
-    print(f'|{i+1:<3}', end='')
-    for k, v in c.items():
-        print(f'|{v:<15}', end='')
-    print()
+
+print(f'{"|No":<3} {"|NOME":<15} {"|SITUAÇÃO":<20}')
+for i, j in enumerate(lista):
+    print(f'|{i+1:<3}|{j["nome"]:<15}|{j["situação"]:<20}')
+
+print('-' * 30)
+
+print('Caso deseje ver os dados de alguém, digite o número no espaço abaixo (Digite 0 para encerrar):')
+
+while True:
+    n = int(input('Deseja ver os dados de alguém? '))
+    if n == 0:
+        break
+    if n <= len(lista):
+        print(f'Mostrando dados de: {lista[n-1]["nome"]}')
+        print(f'Altura: {lista[n-1]["altura"]:.2f}m\nPeso: {lista[n-1]["peso"]}kg\nIMC: {lista[n-1]["imc"]}')
+
+print('-' * 30, '\nEncerrado')
