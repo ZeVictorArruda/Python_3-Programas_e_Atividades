@@ -60,3 +60,18 @@ def lerarquivo(nome):
             print(f'{dado[0]:<30}{dado[1]:>3} anos')
     finally:
         a.close()
+
+
+def cadastrar(arq, nome, idade):
+    try:
+        a = open(arq, 'at')
+    except:
+        print('Erro na abertura do arquivo')
+    else:
+        try:
+            a.write(f'{nome};{idade}')
+        except:
+            print('Erro ao cadastrar')
+        else:
+            print(f'Registro de {nome} adicionado com sucesso')
+            a.close()
