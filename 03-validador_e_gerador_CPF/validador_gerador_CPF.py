@@ -1,3 +1,7 @@
+'''
+Funções para validação e geração de CPF utilizando códigos simples
+'''
+
 def validacao_CPF(cpf):
     cpf = str(cpf)
     if len(cpf) != 11:
